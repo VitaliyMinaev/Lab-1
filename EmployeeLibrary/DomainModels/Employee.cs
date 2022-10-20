@@ -81,7 +81,7 @@ public class Employee
     private void AddPositionToHistory(Position position)
     {
         _positionHistory = _positionHistory.Concat(new string[] 
-                { $"{DateTime.Now}: {position.ConvertPositionToString()}; Department: {_department}" }).ToArray(); 
+                { $"{DateTime.Now}: Position: {position.ConvertPositionToString()}; Department: {_department}" }).ToArray(); 
     }
 
     public void ChangeDepartment(string department)
@@ -119,7 +119,7 @@ public class Employee
         return String.Empty;
     }
 
-    public string FindPositionByDepartment(string department)
+    public string FindPositionInPositionHistoryByDepartment(string department)
     {
         if (_positionHistory.Length == 0)
             return String.Empty;
